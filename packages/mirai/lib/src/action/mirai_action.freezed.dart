@@ -219,8 +219,8 @@ class __$$_MiraiActionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiAction implements _MiraiAction {
-  _$_MiraiAction(
+class _$_MiraiAction extends _MiraiAction {
+  const _$_MiraiAction(
       {this.actionType = ActionType.none,
       this.request,
       final Map<String, dynamic>? widgetJson,
@@ -232,7 +232,8 @@ class _$_MiraiAction implements _MiraiAction {
       final Map<String, dynamic>? arguments})
       : _widgetJson = widgetJson,
         _result = result,
-        _arguments = arguments;
+        _arguments = arguments,
+        super._();
 
   factory _$_MiraiAction.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiActionFromJson(json);
@@ -336,8 +337,8 @@ class _$_MiraiAction implements _MiraiAction {
   }
 }
 
-abstract class _MiraiAction implements MiraiAction {
-  factory _MiraiAction(
+abstract class _MiraiAction extends MiraiAction {
+  const factory _MiraiAction(
       {final ActionType actionType,
       final MiraiRequest? request,
       final Map<String, dynamic>? widgetJson,
@@ -347,6 +348,7 @@ abstract class _MiraiAction implements MiraiAction {
       final NavigationStyle? navigationStyle,
       final Map<String, dynamic>? result,
       final Map<String, dynamic>? arguments}) = _$_MiraiAction;
+  const _MiraiAction._() : super._();
 
   factory _MiraiAction.fromJson(Map<String, dynamic> json) =
       _$_MiraiAction.fromJson;

@@ -42,7 +42,7 @@ const _$ActionTypeEnumMap = {
   ActionType.navigate: 'navigate',
   ActionType.request: 'request',
   ActionType.none: 'none',
-  ActionType.formValidation: 'formValidation',
+  ActionType.submit: 'submit',
 };
 
 const _$NavigationTypeEnumMap = {
