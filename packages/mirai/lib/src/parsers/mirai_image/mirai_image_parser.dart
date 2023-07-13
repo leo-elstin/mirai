@@ -7,7 +7,7 @@ import 'package:mirai/src/utils/color_utils.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiImageParser extends MiraiParser<MiraiImage> {
-  const MiraiImageParser();
+  MiraiImageParser();
 
   @override
   MiraiImage getModel(Map<String, dynamic> json) => MiraiImage.fromJson(json);

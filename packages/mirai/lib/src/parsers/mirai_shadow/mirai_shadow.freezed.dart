@@ -134,7 +134,7 @@ class __$$_MiraiShadowCopyWithImpl<$Res>
 class _$_MiraiShadow implements _MiraiShadow {
   const _$_MiraiShadow(
       {this.color = '#000000',
-      this.offset = const MiraiOffset(dx: 0, dy: 0),
+      this.offset = MiraiOffset(dx: 0, dy: 0),
       this.blurRadius = 0.0});
 
   factory _$_MiraiShadow.fromJson(Map<String, dynamic> json) =>

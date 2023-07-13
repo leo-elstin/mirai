@@ -6,7 +6,7 @@ import 'package:mirai/src/utils/color_utils.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiCardParser extends MiraiParser<MiraiCard> {
-  const MiraiCardParser();
+  MiraiCardParser();
 
   @override
   MiraiCard getModel(Map<String, dynamic> json) => MiraiCard.fromJson(json);

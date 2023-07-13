@@ -5,7 +5,7 @@ import 'package:mirai/src/parsers/mirai_rect/mirai_rect.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiPositionedParser extends MiraiParser<MiraiPositioned> {
-  const MiraiPositionedParser();
+  MiraiPositionedParser();
 
   @override
   MiraiPositioned getModel(Map<String, dynamic> json) =>

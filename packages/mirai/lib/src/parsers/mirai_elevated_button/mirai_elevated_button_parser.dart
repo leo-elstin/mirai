@@ -5,7 +5,7 @@ import 'package:mirai/src/parsers/parsers.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiElevatedButtonParser extends MiraiParser<MiraiElevatedButton> {
-  const MiraiElevatedButtonParser();
+  MiraiElevatedButtonParser();
 
   @override
   MiraiElevatedButton getModel(Map<String, dynamic> json) =>

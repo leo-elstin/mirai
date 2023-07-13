@@ -7,7 +7,7 @@ import 'package:mirai/src/utils/color_utils.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiTabBarParser extends MiraiParser<MiraiTabBar> {
-  const MiraiTabBarParser({this.controller});
+  MiraiTabBarParser({this.controller});
 
   final TabController? controller;
 

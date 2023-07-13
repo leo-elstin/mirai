@@ -10,7 +10,7 @@ _$_MiraiShadow _$$_MiraiShadowFromJson(Map<String, dynamic> json) =>
     _$_MiraiShadow(
       color: json['color'] as String? ?? '#000000',
       offset: json['offset'] == null
-          ? const MiraiOffset(dx: 0, dy: 0)
+          ? MiraiOffset(dx: 0, dy: 0)
           : MiraiOffset.fromJson(json['offset'] as Map<String, dynamic>),
       blurRadius: (json['blurRadius'] as num?)?.toDouble() ?? 0.0,
     );

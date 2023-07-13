@@ -282,6 +282,47 @@
                             "height": 32
                         },
                         {
+                            "type": "row",
+                            "mainAxisAlignment": "start",
+                            "crossAxisAlignment": "start",
+                            "children": [
+                                {
+                                    "type": "formField",
+                                    "child": {
+                                        "type": "twoStateWidget",
+                                        "state": false,
+                                        "trueState": {
+                                            "type": "icon",
+                                            "iconType": "material",
+                                            "icon": "check_box_rounded",
+                                            "size": 18
+                                        },
+                                        "falseState": {
+                                            "type": "icon",
+                                            "iconType": "material",
+                                            "icon": "check_box_outline_blank_rounded",
+                                            "size": 18
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "sizedBox",
+                                    "width": 16
+                                },
+                                {
+                                    "type": "sizedBox",
+                                    "child": {
+                                        "type": "text",
+                                        "data": "I have read and accept the Terms & \nConditions and Privacy Policy"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sizedBox",
+                            "height": 32
+                        },
+                        {
                             "type": "formField",
                             "child": {
                                 "type": "elevatedButton",

@@ -5,7 +5,7 @@ import 'package:mirai/src/parsers/mirai_scroll_view/mirai_scroll_view.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiScrollViewParser extends MiraiParser<MiraiScrollView> {
-  const MiraiScrollViewParser({this.controller});
+  MiraiScrollViewParser({this.controller});
 
   final ScrollController? controller;
 

@@ -12,6 +12,7 @@ import 'package:mirai/src/parsers/mirai_form/mirai_form_parser.dart';
 import 'package:mirai/src/parsers/mirai_form_field/mirai_form_field_parser.dart';
 import 'package:mirai/src/parsers/mirai_fractionally_sized_box/mirai_fractionally_sized_box_parser.dart';
 import 'package:mirai/src/parsers/mirai_tab/mirai_tab_parser.dart';
+import 'package:mirai/src/parsers/mirai_two_state_widget/mirai_two_state_widget_parser.dart';
 import 'package:mirai/src/parsers/parsers.dart';
 import 'package:mirai/src/utils/log.dart';
 
@@ -24,39 +25,40 @@ typedef LoadingWidgetBuilder = Widget Function(BuildContext context);
 
 class Mirai {
   static final _parsers = <MiraiParser>[
-    const MiraiContainerParser(),
-    const MiraiTextParser(),
-    const MiraiTextFieldParser(),
-    const MiraiElevatedButtonParser(),
-    const MiraiImageParser(),
-    const MiraiIconParser(),
-    const MiraiCenterParser(),
-    const MiraiRowParser(),
-    const MiraiColumnParser(),
-    const MiraiStackParser(),
-    const MiraiPositionedParser(),
-    const MiraiIconButtonParser(),
-    const MiraiFloatingActionButtonParser(),
-    const MiraiOutlinedButtonParser(),
-    const MiraiPaddingParser(),
-    const MiraiAppBarParser(),
-    const MiraiTextButtonParser(),
-    const MiraiScaffoldParser(),
-    const MiraiSizedBoxParser(),
-    const MiraiFractionallySizedBoxParser(),
-    const MiraiTextFormFieldParser(),
-    const MiraiTabBarViewParser(),
-    const MiraiTabBarParser(),
-    const MiraiListTileParser(),
-    const MiraiCardParser(),
-    const MiraiBottomNavigationBarParser(),
-    const MiraiListViewParser(),
-    const MiraiDefaultTabControllerParser(),
-    const MiraiScrollViewParser(),
-    const MiraiAlertDialogParser(),
-    const MiraiTabParser(),
-    const MiraiFormParser(),
-    const MiraiFormFieldParser(),
+    MiraiContainerParser(),
+    MiraiTextParser(),
+    MiraiTextFieldParser(),
+    MiraiElevatedButtonParser(),
+    MiraiImageParser(),
+    MiraiIconParser(),
+    MiraiCenterParser(),
+    MiraiRowParser(),
+    MiraiColumnParser(),
+    MiraiStackParser(),
+    MiraiPositionedParser(),
+    MiraiIconButtonParser(),
+    MiraiFloatingActionButtonParser(),
+    MiraiOutlinedButtonParser(),
+    MiraiPaddingParser(),
+    MiraiAppBarParser(),
+    MiraiTextButtonParser(),
+    MiraiScaffoldParser(),
+    MiraiSizedBoxParser(),
+    MiraiFractionallySizedBoxParser(),
+    MiraiTextFormFieldParser(),
+    MiraiTabBarViewParser(),
+    MiraiTabBarParser(),
+    MiraiListTileParser(),
+    MiraiCardParser(),
+    MiraiBottomNavigationBarParser(),
+    MiraiListViewParser(),
+    MiraiDefaultTabControllerParser(),
+    MiraiScrollViewParser(),
+    MiraiAlertDialogParser(),
+    MiraiTabParser(),
+    MiraiFormParser(),
+    MiraiFormFieldParser(),
+    MiraiTwoStateWidgetParser(),
   ];
 
   static Future<void> initialize({
@@ -68,12 +70,14 @@ class Mirai {
     MiraiNetwork.initialize(dio ?? Dio());
   }
 
-  static Widget? fromJson(Map<String, dynamic>? json, BuildContext context) {
+  static Widget? fromJson(Map<String, dynamic>? json, BuildContext context,
+      {Function(dynamic)? onAction}) {
     try {
       if (json != null) {
         String widgetType = json['type'];
         MiraiParser? miraiParser = MiraiRegistry.instance.getParser(widgetType);
         if (miraiParser != null) {
+          miraiParser.callback = onAction;
           final model = miraiParser.getModel(json);
           return miraiParser.parse(context, model);
         } else {

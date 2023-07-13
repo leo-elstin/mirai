@@ -7,7 +7,7 @@ import 'package:mirai/src/utils/color_utils.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiAlertDialogParser extends MiraiParser<MiraiAlertDialog> {
-  const MiraiAlertDialogParser();
+  MiraiAlertDialogParser();
 
   @override
   MiraiAlertDialog getModel(Map<String, dynamic> json) =>

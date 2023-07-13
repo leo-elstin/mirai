@@ -7,7 +7,7 @@ import 'package:mirai_gallery/app/home/home_screen.dart';
 import 'package:mirai_gallery/app_theme/app_theme_cubit.dart';
 
 void main() async {
-  await Mirai.initialize(parsers: const [
+  await Mirai.initialize(parsers: [
     ExampleScreenParser(),
   ]);
 

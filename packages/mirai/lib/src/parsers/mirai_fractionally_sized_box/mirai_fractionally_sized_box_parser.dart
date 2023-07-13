@@ -5,7 +5,7 @@ import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiFractionallySizedBoxParser
     extends MiraiParser<MiraiFractionallySizedBox> {
-  const MiraiFractionallySizedBoxParser();
+  MiraiFractionallySizedBoxParser();
 
   @override
   MiraiFractionallySizedBox getModel(Map<String, dynamic> json) =>

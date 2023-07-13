@@ -4,7 +4,7 @@ import 'package:mirai/src/parsers/mirai_tab/mirai_tab.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiTabParser extends MiraiParser<MiraiTab> {
-  const MiraiTabParser();
+  MiraiTabParser();
 
   @override
   MiraiTab getModel(Map<String, dynamic> json) => MiraiTab.fromJson(json);

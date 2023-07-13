@@ -14,7 +14,7 @@ import 'package:mirai/src/utils/log.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiTextFormFieldParser extends MiraiParser<MiraiTextFormField> {
-  const MiraiTextFormFieldParser();
+  MiraiTextFormFieldParser();
 
   @override
   MiraiTextFormField getModel(Map<String, dynamic> json) =>

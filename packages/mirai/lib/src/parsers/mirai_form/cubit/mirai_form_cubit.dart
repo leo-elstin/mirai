@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 part 'mirai_form_state.dart';
 
 class MiraiFormCubit extends Cubit<MiraiFormState> {
-  MiraiFormCubit() : super(const MiraiFormState());
+  MiraiFormCubit() : super(MiraiFormState());
 
   void addController(String key, TextEditingController controller) {
     Map<String, TextEditingController> controllers =

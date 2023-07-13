@@ -4,7 +4,7 @@ import 'package:mirai/src/parsers/mirai_stack/mirai_stack.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiStackParser extends MiraiParser<MiraiStack> {
-  const MiraiStackParser();
+  MiraiStackParser();
 
   @override
   MiraiStack getModel(Map<String, dynamic> json) => MiraiStack.fromJson(json);

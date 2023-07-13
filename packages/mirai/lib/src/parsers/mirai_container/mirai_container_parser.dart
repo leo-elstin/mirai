@@ -7,7 +7,7 @@ import 'package:mirai/src/utils/color_utils.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiContainerParser extends MiraiParser<MiraiContainer> {
-  const MiraiContainerParser();
+  MiraiContainerParser();
 
   @override
   MiraiContainer getModel(Map<String, dynamic> json) =>

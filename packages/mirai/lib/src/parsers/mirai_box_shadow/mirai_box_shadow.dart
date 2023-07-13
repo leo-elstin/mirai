@@ -8,7 +8,7 @@ part 'mirai_box_shadow.g.dart';
 
 @freezed
 class MiraiBoxShadow with _$MiraiBoxShadow {
-  const factory MiraiBoxShadow({
+  factory MiraiBoxShadow({
     String? color,
     @Default(0.0) double? blurRadius,
     @Default(MiraiOffset(dx: 0, dy: 0)) MiraiOffset offset,
@@ -23,7 +23,7 @@ class MiraiBoxShadow with _$MiraiBoxShadow {
 extension MiraiBoxShadowParser on MiraiBoxShadow? {
   BoxShadow get parse {
     return BoxShadow(
-      color: this?.color.toColor ?? const Color(0xFF000000),
+      color: this?.color?.toColor ?? const Color(0xFF000000),
       blurRadius: this?.blurRadius ?? 0.0,
       offset: this?.offset.parse ?? Offset.zero,
       spreadRadius: this?.spreadRadius ?? 0.0,

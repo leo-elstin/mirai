@@ -5,7 +5,7 @@ import 'package:mirai_gallery/app/example/example_screen.dart';
 import 'package:mirai_gallery/app_theme/app_theme_cubit.dart';
 
 class ExampleScreenParser extends MiraiParser<ExampleScreen> {
-  const ExampleScreenParser();
+  ExampleScreenParser();
 
   @override
   ExampleScreen getModel(Map<String, dynamic> json) =>

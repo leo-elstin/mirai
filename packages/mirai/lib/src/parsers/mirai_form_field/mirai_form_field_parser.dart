@@ -6,7 +6,7 @@ import 'package:mirai/src/parsers/mirai_form_field/mirai_form_field.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiFormFieldParser extends MiraiParser<MiraiFormField> {
-  const MiraiFormFieldParser();
+  MiraiFormFieldParser();
 
   @override
   MiraiFormField getModel(Map<String, dynamic> json) =>
@@ -17,7 +17,7 @@ class MiraiFormFieldParser extends MiraiParser<MiraiFormField> {
 
   @override
   Widget parse(BuildContext context, MiraiFormField model) {
-    Map<String, dynamic> child = Map<String, dynamic>.from(model.child ?? {});
+    Map<String, dynamic> child = Map<String, dynamic>.from(model.child);
 
     final formFilled = context.read<MiraiFormCubit>().formFilled;
     if (!formFilled) {

@@ -5,7 +5,7 @@ import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiDefaultTabControllerParser
     extends MiraiParser<MiraiDefaultTabController> {
-  const MiraiDefaultTabControllerParser();
+  MiraiDefaultTabControllerParser();
 
   @override
   MiraiDefaultTabController getModel(Map<String, dynamic> json) =>

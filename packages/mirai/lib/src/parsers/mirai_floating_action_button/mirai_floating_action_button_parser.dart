@@ -9,7 +9,7 @@ import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiFloatingActionButtonParser
     extends MiraiParser<MiraiFloatingActionButton> {
-  const MiraiFloatingActionButtonParser();
+  MiraiFloatingActionButtonParser();
 
   @override
   MiraiFloatingActionButton getModel(Map<String, dynamic> json) =>

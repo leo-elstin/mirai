@@ -1,7 +1,7 @@
 part of 'mirai_form_cubit.dart';
 
 class MiraiFormState {
-  const MiraiFormState({
+  MiraiFormState({
     this.controllers = const {},
     this.values = const {},
     this.validations = const {},

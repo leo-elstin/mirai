@@ -4,7 +4,7 @@ import 'package:mirai/src/parsers/mirai_tab_bar_view/mirai_tab_bar_view.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiTabBarViewParser extends MiraiParser<MiraiTabBarView> {
-  const MiraiTabBarViewParser({this.controller});
+  MiraiTabBarViewParser({this.controller});
 
   final TabController? controller;
 

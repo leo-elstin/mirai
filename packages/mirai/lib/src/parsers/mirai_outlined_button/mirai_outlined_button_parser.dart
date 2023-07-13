@@ -5,7 +5,7 @@ import 'package:mirai/src/parsers/parsers.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiOutlinedButtonParser extends MiraiParser<MiraiOutlinedButton> {
-  const MiraiOutlinedButtonParser();
+  MiraiOutlinedButtonParser();
 
   @override
   MiraiOutlinedButton getModel(Map<String, dynamic> json) =>

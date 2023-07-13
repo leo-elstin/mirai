@@ -14,7 +14,7 @@ enum NavigationStyle {
 enum NavigationType { screen, dialog, bottomSheet }
 
 class MiraiNavigator {
-  const MiraiNavigator._();
+  MiraiNavigator._();
 
   static Future<dynamic>? navigate<T extends Object?>({
     required BuildContext context,

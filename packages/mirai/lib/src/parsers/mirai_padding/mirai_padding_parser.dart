@@ -5,7 +5,7 @@ import 'package:mirai/src/parsers/mirai_padding/mirai_padding.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiPaddingParser extends MiraiParser<MiraiPadding> {
-  const MiraiPaddingParser();
+  MiraiPaddingParser();
 
   @override
   MiraiPadding getModel(Map<String, dynamic> json) =>

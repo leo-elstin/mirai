@@ -164,7 +164,7 @@ class __$$_MiraiBoxShadowCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MiraiBoxShadow implements _MiraiBoxShadow {
-  const _$_MiraiBoxShadow(
+  _$_MiraiBoxShadow(
       {this.color,
       this.blurRadius = 0.0,
       this.offset = const MiraiOffset(dx: 0, dy: 0),
@@ -229,7 +229,7 @@ class _$_MiraiBoxShadow implements _MiraiBoxShadow {
 }
 
 abstract class _MiraiBoxShadow implements MiraiBoxShadow {
-  const factory _MiraiBoxShadow(
+  factory _MiraiBoxShadow(
       {final String? color,
       final double? blurRadius,
       final MiraiOffset offset,

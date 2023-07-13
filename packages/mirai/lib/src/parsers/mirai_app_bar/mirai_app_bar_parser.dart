@@ -6,7 +6,7 @@ import 'package:mirai/src/utils/color_utils.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiAppBarParser extends MiraiParser<MiraiAppBar> {
-  const MiraiAppBarParser();
+  MiraiAppBarParser();
 
   @override
   MiraiAppBar getModel(Map<String, dynamic> json) => MiraiAppBar.fromJson(json);

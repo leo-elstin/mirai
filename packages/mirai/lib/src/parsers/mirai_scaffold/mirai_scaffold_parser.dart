@@ -5,7 +5,7 @@ import 'package:mirai/src/utils/color_utils.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiScaffoldParser extends MiraiParser<MiraiScaffold> {
-  const MiraiScaffoldParser();
+  MiraiScaffoldParser();
 
   @override
   MiraiScaffold getModel(Map<String, dynamic> json) =>

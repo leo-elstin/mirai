@@ -4,7 +4,7 @@ import 'package:mirai/src/parsers/mirai_center/mirai_center.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiCenterParser extends MiraiParser<MiraiCenter> {
-  const MiraiCenterParser();
+  MiraiCenterParser();
 
   @override
   MiraiCenter getModel(Map<String, dynamic> json) => MiraiCenter.fromJson(json);

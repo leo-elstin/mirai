@@ -7,7 +7,7 @@ import 'package:mirai/src/parsers/mirai_form/mirai_form.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiFormParser extends MiraiParser<MiraiForm> {
-  const MiraiFormParser();
+  MiraiFormParser();
 
   @override
   MiraiForm getModel(Map<String, dynamic> json) => MiraiForm.fromJson(json);

@@ -4,7 +4,7 @@ import 'package:mirai/src/parsers/mirai_sized_box/mirai_sized_box.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiSizedBoxParser extends MiraiParser<MiraiSizedBox> {
-  const MiraiSizedBoxParser();
+  MiraiSizedBoxParser();
 
   @override
   MiraiSizedBox getModel(Map<String, dynamic> json) =>

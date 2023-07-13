@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:mirai/src/network/mirai_request.dart';
 
 class MiraiNetwork {
-  const MiraiNetwork._();
+  MiraiNetwork._();
 
   static late Dio _dio;
 

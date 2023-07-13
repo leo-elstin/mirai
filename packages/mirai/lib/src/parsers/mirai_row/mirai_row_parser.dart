@@ -4,7 +4,7 @@ import 'package:mirai/src/parsers/mirai_row/mirai_row.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiRowParser extends MiraiParser<MiraiRow> {
-  const MiraiRowParser();
+  MiraiRowParser();
 
   @override
   MiraiRow getModel(Map<String, dynamic> json) => MiraiRow.fromJson(json);

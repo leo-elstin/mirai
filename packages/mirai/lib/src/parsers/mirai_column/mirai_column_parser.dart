@@ -4,7 +4,7 @@ import 'package:mirai/src/parsers/mirai_column/mirai_column.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiColumnParser extends MiraiParser<MiraiColumn> {
-  const MiraiColumnParser();
+  MiraiColumnParser();
 
   @override
   MiraiColumn getModel(Map<String, dynamic> json) => MiraiColumn.fromJson(json);

@@ -17,7 +17,7 @@ import 'package:flutter/material.dart';
 import 'package:mirai/mirai.dart';
 
 class MiraiTextParser extends MiraiParser<MiraiText> {
-  const MiraiTextParser();
+  MiraiTextParser();
 
   @override
   MiraiText getModel(Map<String, dynamic> json) => MiraiText.fromJson(json);

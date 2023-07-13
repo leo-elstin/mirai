@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mirai/src/parsers/mirai_theme/mirai_theme.dart';
 
 class MiraiApp extends StatelessWidget {
-  const MiraiApp({
+  MiraiApp({
     super.key,
     this.navigatorKey,
     this.scaffoldMessengerKey,
@@ -47,7 +47,7 @@ class MiraiApp extends StatelessWidget {
         backButtonDispatcher = null,
         routerConfig = null;
 
-  const MiraiApp.router({
+  MiraiApp.router({
     super.key,
     this.scaffoldMessengerKey,
     this.routeInformationProvider,
